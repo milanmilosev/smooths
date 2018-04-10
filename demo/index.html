@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="smooths, a very lightweight (~1KB), JS script that assists smooth scrolling"/>
+	<title></title>
+	<link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<section id="section-one" class="topbar section-one scroll-section">
+		<nav id="topbar--menu" class="topbar__menu">
+			<a href="" id="menu" class="topbar__menu__icon">
+				<svg class="icon--open" viewBox="0 0 32 32" width="100%" height="100%">
+					<path d="M30.667 17.333v-2.667H1.334v2.667zm0-9.333V5.333H1.334V8zm0 18.667V24H1.334v2.667z"></path>
+				</svg>
+				<svg class="icon--close" viewBox="0 0 152 152">
+					<path d="M152 17L135 0 76 59 17 0 0 17l59 59-59 59 17 17 59-59 59 59 17-17-59-59z"></path>
+				</svg>
+			</a>
+			<div class="topbar__menu__wrap">
+				<ul>
+					<li>
+						<a href="#section-one" class="section-item link">Home</a>
+					</li>
+					<li>
+						<a href="#section-two" class="section-item link">Getting Started</a>
+					</li>
+					<li>
+						<a href="#section-three" class="section-item link">Configuration</a>
+					</li>
+					<li>
+						<a href="#section-four" class="section-item link">Options</a>
+					</li>
+					<li>
+						<a href="#section-five" class="section-item link">About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="topbar__wrap">
+			<h1 class="topbar__heading">smooths, <span class="topbar__heading--first">a very lightweight (~1KB) </span><span class="topbar__heading--second">script that assists smooth scrolling</span></h1>
+			<p class="topbar__description"></p>
+			<p class="topbar__description">Download: <a href="https://github.com/milanmilosev/Smooths/" target="_blank">https://github.com/milanmilosev/Smooths/</a></p>
+			<a href="#section-two" class="topbar__anchor link"></a>
+		</div>
+		<div class="me">
+			<a href="https://twitter.com/milanmiloshev" class="twitter">
+			  <img src="http://milanmilosev.com/img/img@2x.png" width="45" height="45" alt="Twitter pic">
+			  <span>@milanmiloshev</span>
+			</a>
+		</div>
+	</section>
+	<section id="section-two" class="section-two scroll-section">
+	<div class="section-two__wrap">
+	<h2 class="section-two__heading">Getting Started</h2>
+	<pre>
+	<code>
+&lt;body&gt;
+	// Add the markup to your HTML.
+	&lt;a href="#section-one" class="link"&gt;Section 1&lt;/a&gt;
+	&lt;a href="#section-two" class="link"&gt;Section 2&lt;/a&gt;
+
+	// Add the markup to your HTML.
+	&lt;div id="section-one" class="scroll-section"&gt;&lt;/div&gt; 
+	&lt;div id="section-two" class="scroll-section"&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script src="js/smooths.min.js">&lt;script&gt; // Include Smooth Scroll on your site.
+
+&lt;script&gt;
+var smooths = new smooths({  //  Initialize Smooths
+	section: 'scroll-section',
+	anchor: 'link'
+});
+&lt;/script&gt;
+		</code>
+	</pre>
+	</div>
+	</section>
+	<section id="section-three" class="section-three scroll-section">
+		<div class="section-three__wrap">
+		<h2 class="section-three__heading">Configuration</h2>
+			<pre>
+				<code>
+				
+section: 'scroll-section',
+//
+// Make sure to add your section class here
+// all section should have the same class name
+//
+
+anchor: 'link',
+//
+// Add smooth scrolling to all links with 'link' class
+//
+
+speed: 200,
+//
+// The default speed value is 200 (2s)
+// specifies the number of milliseconds it takes to scroll to the specified area
+//
+				</code>
+			</pre>
+		</div>
+	</section>
+	<section id="section-four" class="section-four scroll-section">
+		<div class="section-four__wrap">
+		<h2 class="section-four__heading">Options</h2>
+			<pre>
+				<code>
+				
+in progress
+				</code>
+			</pre>
+		</div>
+	</section>
+	<section id="section-five" class="section-five scroll-section">
+		<div class="section-five__wrap">
+		<h2 class="section-five__heading">About</h2>
+		<p class="section-five__description">Smooths is a very lightweight (~ 1KB) script that assists smooth scrolling to anchor links, written with vanilla JavaScript, created by <a href="http://www.milanmilosev.com" target="_blank">Milan Milosev</a>.</p>
+		<h2 class="section-five__heading--second">How it's work?</h2>
+		<p class="section-five__description">By clicking on the link will animate scrolling to a specific section on the page.</p>
+		<h2 class="section-five__heading--second">Why should I use this script (there are plenty on the Internet...)?</h2>
+		<p class="section-five__description">If you're worried about speed and performance (like me), if you aren't minding about fancy effect that required more resource and slow your UX, then this one is a perfect match for you.</p>
+		</div>
+	</section>
+	<script src="dist/js/smooths.min.js"></script>
+	<script>
+		var smooths = new smooths({
+			section: 'scroll-section',
+			anchor: 'link'
+		});
+	</script>
+	<script>
+		var menuButton = document.getElementById("menu");
+		var menu = document.getElementById("topbar--menu");
+
+		menuButton.addEventListener("click", function(e) {
+			e.preventDefault();
+			menu.classList.toggle("topbar__menu__wrap--active");
+		});
+  </script>
+</body>
+
+</html>
