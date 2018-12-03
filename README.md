@@ -77,7 +77,4 @@ Smooths is a very lightweight (~ 1KB) script that assists smooth scrolling to an
 ### How it's work?
 By clicking on the link will animate scrolling to a specific section on the page.
 
-### Why should I use this script (there are plenty on the Internet...)?
-If you're worried about speed and performance (like me), if you aren't minding about fancy effect that required more resource and slow your UX, then this one is a perfect match for you.
-
 
