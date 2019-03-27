@@ -22,7 +22,6 @@ gulp.task('scripts', function() {
   .pipe(sourcemaps.init())
   .pipe(babel())
   .pipe(concat('smooths.js'))
-  .pipe(gulp.dest('./dist/js/'))
   .pipe(gulp.dest('./demo/js/'))
   .pipe(minify({
     mangle: {
@@ -31,7 +30,6 @@ gulp.task('scripts', function() {
   }))
   .pipe(rename({ suffix: '.min' }))
   .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('./dist/js/'))
   .pipe(gulp.dest('./demo/js/'))
 });
 
