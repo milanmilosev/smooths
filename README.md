@@ -6,6 +6,7 @@
 A VERY LIGHTWEIGHT (~1KB) SCRIPT THAT ASSISTS SMOOTH SCROLLING
 
 [View the demo](http://milanmilosev.com/projects/smooths/)
+
 [View the demo on Codepen](https://codepen.io/MilanMilosev/pen/NYoOoW)
 
 
@@ -76,5 +77,3 @@ Smooths is a very lightweight (~ 1KB) script that assists smooth scrolling to an
 
 ### How it's work?
 By clicking on the link will animate scrolling to a specific section on the page.
-
-
