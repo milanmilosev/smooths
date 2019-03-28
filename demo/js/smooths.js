@@ -1,6 +1,6 @@
 (function () {
   this.smooths = function () {
-    let defaults = {
+    const defaults = {
       section: 'section',
       anchor: 'link',
       speed: 200,
@@ -13,16 +13,16 @@
     } // add active class to anchor
 
 
-    let s = document.getElementsByClassName(this.options.section);
-    let navigation = document.getElementsByClassName(this.options.anchor);
-    let section = [];
+    const s = document.getElementsByClassName(this.options.section);
+    const navigation = document.getElementsByClassName(this.options.anchor);
+    const section = [];
 
     for (let i of s) {
       section.push(i.offsetTop);
     }
 
     window.addEventListener('scroll', function (e) {
-      let scroll = Math.round(window.scrollY);
+      const scroll = Math.round(window.scrollY);
       let a = 0;
 
       for (let i of section) {
