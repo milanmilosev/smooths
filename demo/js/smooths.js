@@ -2,7 +2,7 @@
   this.smooths = function () {
     const defaults = {
       section: 'section',
-      anchor: 'link',
+      anchor: 'anchor',
       speed: 200,
       easing: 10 // Create options by extending defaults with the passed in arugments
 
@@ -13,12 +13,12 @@
     } // add active class to anchor
 
 
-    const s = document.getElementsByClassName(this.options.section);
+    const anchors = document.getElementsByClassName(this.options.section);
     const navigation = document.getElementsByClassName(this.options.anchor);
     const section = [];
 
-    for (let i of s) {
-      section.push(i.offsetTop);
+    for (let anchor of anchors) {
+      section.push(anchor.offsetTop);
     }
 
     window.addEventListener('scroll', function (e) {
